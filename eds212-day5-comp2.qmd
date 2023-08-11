@@ -4,4 +4,46 @@ format: html
 editor: visual
 ---
 
-change
+# Some logical operators
+
+-   == (does this match?)
+-   !=(do these not match?)
+-   >, <, >=, <=
+-   & (and), | (or)
+```{r}
+#does 4 match 5? (no)
+4 == 5
+
+#does 4 match 4 (yes)
+4 == 4
+
+#does 4 not match 5? (yes)
+4 != 5
+
+#does 4 match "4"?
+4 == "4"
+
+#with assigned variables:
+cat <- 10
+dog <- 7
+
+cat > dog
+
+#is dog greater than cat, OR is cat less than 20
+dog > cat | cat < 20
+
+#Is dog less than cat AND cat == 10
+dog < cat & cat == 10
+```
+
+```{r}
+library(tidyverse)
+#usually you want to run at the beginning but i am lazy so here you are lol
+```
+
+```{r}
+ggplot(data = mtcars, aes(x = wt, y = mpg)) + 
+  geom_point(aes(size = mpg, color = wt)) + 
+  labs(x = "car weight (in thousands of pounds", y = "miles per gallon(mpg)", title = "weight vs mpg")
+```
+
